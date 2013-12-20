@@ -1,0 +1,69 @@
+---
+layout: default
+---
+
+<h1 class="page-header main-header">{{ site.frontpage.title }}</h1>
+
+{% if site.bubblemap %}
+<div class="row spaced">
+  <h2 class="span4">
+    <a href="bubbletree-map.html">{{ site.bubblemap.title }}</a>
+  </h2>
+  <div class="span4">
+    <a href="bubbletree-map.html">
+      <img src="{{site.subdirectory}}/img/bubbles.png" alt="BubbleTree" />
+    </a>
+  </div>
+  <div class="span4">
+    <p>
+      {{ site.bubblemap.description }}
+    </p>
+  </div>
+</div>
+{% endif %}
+{% if site.browser %}
+<div class="row spaced">
+  <h2 class="span4">
+    <a href="browser.html">{{ site.browser.title }}</a>
+  </h2>
+  <div class="span4">
+    <a href="browser.html">
+      <img src="{{site.subdirectory}}/img/browser.png" alt="Browser" />
+    </a>
+  </div>
+  <div class="span4">
+    <p>
+      {{ site.browser.description }}
+    </p>
+  </div>
+</div>
+{% endif %}
+{% if site.dailybread %}
+<div class="row spaced">
+  <h2 class="span4">
+    <a href="dailybread.html">{{ site.dailybread.title }}</a>
+  </h2>
+  <div class="span4">
+    <a href="dailybread.html">
+      <img src="{{site.subdirectory}}/img/dailybread.png" alt="Daily Bread" />
+    </a>
+  </div>
+  <div class="span4">
+    <p>
+      {{ site.dailybread.description }}
+    </p>
+  </div>
+</div>
+{% endif %}
+<div class="row spaced well">
+  <div class="span7">
+    <p>
+      {{ site.frontpage.openspending }}
+    </p>
+  </div>
+  <div class="span4 pull-right">
+    <a href="http://openspending.org">
+      <img src="{{site.subdirectory}}/img/openspending.png" alt="OpenSpending" />
+    </a>
+  </div>
+</div>

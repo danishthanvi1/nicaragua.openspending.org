@@ -1,0 +1,57 @@
+---
+layout: blank
+---
+
+
+<header>
+  <div class="container">
+    <div id="logo">
+      <a href="/">
+        <img src="img/logo.png" alt="{{ site.title }}">
+        <div id="claim">
+          {{ site.tagline }}
+        </div>
+      </a>
+    </div>
+    <nav>
+      <ul class="nav nav-tabs">
+        {% if site.browser %}<li><a href="browser.html">{{ site.browser.title }}</a></li>{% endif %}
+        {% if site.bubblemap %}<li><a href="bubbletree-map.html">{{ site.bubblemap.title }}</a></li>{% endif %}
+        {% if site.dailybread %}<li><a href="dailybread.html">{{ site.dailybread.title }}</a></li>{% endif %}
+      </ul>
+    </nav>
+    <script type="text/javascript">
+      $(function() {
+        $('ul.nav-tabs a').each(function(i,el) {
+          if (window.location.href.indexOf($(el).attr('href')) > 0) {
+        $(el).addClass('active');
+          }
+        });
+      });
+    </script>
+  </div>
+</header>
+
+<div class="container">
+  {{ content }}
+</div>
+
+<footer>
+  <div class="inner">
+    <div class="container">
+      <p>
+        {{ site.title }} is based on <a href="http://openspending.org">OpenSpending</a>, where you can also find the 
+        <a href="http://openspending.org/datasets/">source data</a>. <br/>
+      </p>
+
+      All <a href="http://creativecommons.org/licenses/by/3.0/">content</a>, 
+      <a href="http://www.gnu.org/licenses/agpl.html">code</a> 
+      and <a href="http://opendatacommons.org/licenses/odbl/">data</a> is 
+      openly licensed in accordance with the 
+      <a href="http://opendefinition.org/">open definition</a>.
+      <br/>
+      <a href="http://opendefinition.org"><img src="http://assets.okfn.org/images/ok_buttons/od_80x15_blue.png" alt="Open Content" /></a>
+    </div>
+  </div>
+</footer>
+
